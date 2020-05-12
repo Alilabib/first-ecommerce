@@ -1,0 +1,339 @@
+/*-------- 9. Subscribe style ---------*/
+
+.subscribe-title {
+    margin-left: 36px;
+    @media #{$xl-layout} {
+        margin-left: 0px;
+    }
+    @media #{$lg-layout} {
+        margin-left: 0px;
+    }
+    @media #{$md-layout} {
+        margin-left: 0px;
+        text-align: center;
+    }
+    @media #{$xs-layout} {
+        margin-left: 0px;
+        text-align: center;
+    }
+    h3 {
+        color: #fff;
+        margin: 0;
+        font-size: 36px;
+        @media #{$lg-layout} {
+            font-size: 29px;
+        }
+        @media #{$xs-layout} {
+            font-size: 30px;
+        }
+    }
+}
+
+.subscribe-form {
+    .mc-form {
+        position: relative;
+        > input {
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            border: none;
+            border-bottom: 1px solid #858585;
+            background-color: transparent;
+            height: 42px;
+            padding: 2px 100px 2px 0;
+            @media #{$xs-layout} {
+                font-size: 14px;
+                padding: 2px 80px 2px 0;
+            }
+        }
+        .mc-news {
+            display: none;
+        }
+        .clear {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            input {
+                border: none;
+                font-size: 16px;
+                font-weight: 600;
+                color: #fff;
+                padding: 0;
+                background-color: transparent;
+                @media #{$xs-layout} {
+                    font-size: 14px;
+                }
+                &:hover {
+                    color: #ccc;
+                }
+            }
+        }
+    }
+    &.subscribe-mrg-1 {
+        margin: 0 34px 0 66px;
+        @media #{$md-layout} {
+            margin: 15px 0px 0 0px;
+        }
+        @media #{$xs-layout} {
+            margin: 15px 0px 0 0px;
+        }
+    }
+}
+.subscribe-pt {
+    padding-top: 115px;
+    @media #{$xs-layout} {
+        padding-top: 112px;
+    }
+}
+.subscribe-pb {
+    padding-bottom: 70px;
+    @media #{$xs-layout} {
+        padding-bottom: 50px;
+    }
+}
+
+.subscribe-title-2 {
+    h3 {
+        color: #fff;
+        font-size: 36px;
+        margin: 0 0 24px;
+        @media #{$xs-layout} {
+            font-size: 23px;
+        }
+    }
+}
+
+.subscribe-form-2 {
+    .mc-form-2 {
+        position: relative;
+        input {
+            height: 90px;
+            background-color: #fff;
+            color: #393939;
+            font-size: 16px;
+            border: none;
+            padding: 2px 160px 2px 50px;
+            border-radius: 50px;
+            box-shadow: 0px 0px 12px rgba(199, 199, 199, 0.5);
+            @media #{$xs-layout} {
+                height: 60px;
+                font-size: 14px;
+                padding: 2px 125px 2px 14px;
+            }
+        }
+        .mc-news-2 {
+            display: none;
+        }
+        .clear-2 {
+            position: absolute;
+            right: 13px;
+            top: 50%;
+            transform: translateY(-50%);
+            input {
+                width: auto;
+                height: auto;
+                padding: 5px 20px;
+                color: #fff;
+                font-size: 16px;
+                font-weight: 600;
+                padding: 20px 30px;
+                background-color: $theme-color-yellow;
+                box-shadow: none;
+                &:hover {
+                    background-color: #262626;
+                }
+                @media #{$xs-layout} {
+                    padding: 8px 15px;
+                    font-size: 14px;
+                }
+            }
+        }
+        &.mc-form-2-modify {
+            input {
+                border: 2px solid #d8d8d8;
+            }
+            .clear-2 {
+                input {
+                    border: none;
+                    background-color: $theme-color-yellow-2;
+                    &:hover {
+                        background-color: #262626;
+                    }
+                }
+                &.organic-clear-2 {
+                    input {
+                        background-color: $theme-color-green-3;
+                        &:hover {
+                            background-color: #262626;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.subscribe-title-3 {
+    h3 {
+        font-size: 36px;
+        margin: 0;
+        color: #1b1b1b;
+        font-family: $rufina;
+        font-weight: bold;
+        @media #{$xs-layout} {
+            font-size: 28px;
+        }
+    }
+    @media #{$xs-layout} {
+        &.mb-30 {
+            margin-bottom: 10px;
+        }
+    }
+}
+.subscribe-form-3 {
+    .mc-form-3 {
+        position: relative;
+        input {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #1b1b1b;
+            font-size: 18px;
+            color: #1b1b1b;
+            padding: 2px 150px 2px 0;
+            height: 60px;
+            @media #{$xs-layout} {
+                font-size: 14px;
+                padding: 2px 104px 2px 0;
+                height: 50px;
+            }
+        }
+        .mc-news-3 {
+            display: none;
+        }
+        .clear-3 {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            input {
+                background-color: transparent;
+                border: none;
+                font-size: 18px;
+                font-weight: 600;
+                padding: 0;
+                height: auto;
+                color: #1b1b1b;
+                @media #{$xs-layout} {
+                    font-size: 14px;
+                }
+                &:hover {
+                    color: $theme-color-yellow;
+                }
+            }
+        }
+    }
+}
+
+.subscribe-form-4 {
+    .mc-form-4 {
+        position: relative;
+        input {
+            background-color: transparent;
+            border: 2px solid #38866f;
+            font-size: 18px;
+            color: #515151;
+            padding: 2px 150px 2px 28px;
+            height: 80px;
+            @media #{$xs-layout} {
+                font-size: 14px;
+                padding: 2px 100px 2px 15px;
+                height: 50px;
+            }
+        }
+        .mc-news-4 {
+            display: none;
+        }
+        .clear-4 {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 20px;
+            input {
+                background-color: transparent;
+                border: none;
+                font-size: 18px;
+                font-weight: 600;
+                padding: 0;
+                height: auto;
+                color: #515151;
+                @media #{$xs-layout} {
+                    font-size: 14px;
+                }
+                &:hover {
+                    color: #777;
+                }
+            }
+        }
+    }
+}
+
+.instagram-border-radious {
+    border-radius: 220px;
+}
+.subscribe-pets-ptb {
+	padding: 145px 0 150px;
+    @media #{$xs-layout} {
+        padding: 70px 0 70px;
+    }
+}
+
+.subscribe-form-5 {
+    .subscribe-form-style-5 {
+        .mc-form-5 {
+            position: relative;
+            input {
+                background-color: transparent;
+                color: #262626;
+                height: 70px;
+                border: 1px solid #262626;
+                padding: 2px 60px 2px 20px;
+            }
+            .mc-news-5 {
+                display: none;
+            }
+            .clear-5 {
+                display: inline-block;
+                position: absolute;
+                right: 2px;
+                top: 0;
+                transition: all 0.3s ease 0s;
+                width: 50px;
+                border: none;
+                padding: 0;
+                z-index: 99;
+                background: rgba(0, 0, 0, 0) url("../../assets/images/icon-img/mail.png") no-repeat scroll right 18px center;
+                input {
+                    width: 50px;
+                    border: none;
+                    cursor: pointer;
+                    padding: 2px 5px 2px;
+                }
+            }
+        }
+    }
+}
+
+@media #{$xs-layout} {
+    .subscribe-area {
+        &.pt-70 {
+            padding-top: 40px;
+        }
+        &.pb-80 {
+            padding-bottom: 50px;
+        }
+    }
+}
+
+
+

@@ -1,0 +1,118 @@
+/*-------- 26. Login register style ---------*/
+
+.login-register-wrap {
+    h3 {
+        i {
+            margin-right: 10px;
+        }
+        font-size: 20px;
+        margin: 0;
+        color: #1D1D1D;
+        a {
+            color: #969696;
+            &:hover {
+                color: $theme-color-yellow;
+            }
+        }
+    }
+    .login-register-form {
+        margin: 30px 0 0;
+        @media #{$xs-layout} {
+            margin: 10px 0 0;
+        }
+        .sin-login-register {
+            margin: 0 0 10px;
+            input {
+                background: transparent;
+                border: 1px solid #CDCDCD;
+                height: 70px;
+                padding: 5px 20px;
+                color: #777;
+                @media #{$xs-layout} {
+                    height: 50px;
+                }
+                &:focus {
+                    border: 1px solid #262626;
+                }
+            }
+        }
+    }
+}
+
+.login-register-btn {
+    button {
+        border: none;
+        padding: 0;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #fff;
+        line-height: 1;
+        margin-right: 7px;
+        @media #{$xs-layout} {
+            margin-bottom: 10px;
+        }
+        &.login {
+            padding: 18px 50px;
+            background-color: #262626;
+        }
+        &.login-fb {
+            padding: 18px 30px;
+            background-color: #435DA7;
+        }
+        &:hover {
+            background-color: $theme-color-yellow;
+        }
+    }
+}
+
+.remember-lost-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 23px 0 45px;
+    justify-content: space-between;
+    @media #{$xs-layout} {
+        display: block;
+        margin: 12px 0 15px;
+    }
+    @media #{$sm-layout} {
+        display: flex;
+        margin: 22px 0 25px;
+    }
+    .remember-wrap {
+        display: flex;
+        @media #{$xs-layout} {
+            display: block;
+        }
+        input {
+            width: 16px;
+            height: auto;
+        }
+        label {
+            line-height: 1;
+            margin: 0 0 0 10px;
+            color: #1D1D1D;
+        }
+    }
+    .lost-wrap {
+        a {
+            line-height: 1;
+            color: #D25B5B;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.register-form-wrap {
+    display: none;
+}
+
+
+
+
+
+
+
+

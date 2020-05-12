@@ -1,0 +1,145 @@
+/*-------- 31. Faq style ---------*/
+
+.faq-title {
+    h2 {
+        font-weight: bold;
+        font-size: 32px;
+        margin: 0 0 42px;
+        color: #000;
+        text-transform: uppercase;
+        @media #{$md-layout} {
+            font-size: 25px;
+            margin: 0 0 20px;
+        }
+        @media #{$xs-layout} {
+            font-size: 25px;
+            margin: 0 0 20px;
+        }
+    }
+}
+
+.faq-accordion {
+    border: 1px solid #e3e3e3;
+    border-radius: 0px;
+    background-color: #fff;
+    .panel-heading {
+        h4 {
+            font-size: 14px;
+            margin: 0;
+            background-color: #fff;
+            a {
+                letter-spacing: 1px;
+                color: $theme-color-yellow;
+                font-size: 12px;
+                display: block;
+                position: relative;
+                padding: 27px 30px;
+                font-weight: bold;
+                text-transform: uppercase;
+                @media #{$xs-layout} {
+                    padding: 20px 30px 20px 20px;
+                }
+                &.collapsed {
+                    position: relative;
+                    color: #181818;
+                    font-weight: 400;
+                    &::before {
+                        position: absolute;
+                        right: 13px;
+                        height: 2px;
+                        background-color: #111111;
+                        width: 12px;
+                        top: 50%;
+                        margin-top: -2px;
+                        content: "";
+                        transition: all .3s ease 0s;
+                    }
+                    &::after {
+                        content: "";
+                        width: 2px;
+                        height: 12px;
+                        position: absolute;
+                        background-color: #111111;
+                        top: 49%;
+                        transform: translateY(-50%);
+                        right: 18px;
+                        transition: all .3s ease 0s;
+                    }
+                }
+                &::before {
+                    position: absolute;
+                    right: 13px;
+                    height: 2px;
+                    background-color: #343538;
+                    width: 12px;
+                    top: 50%;
+                    margin-top: -2px;
+                    content: "";
+                    transition: all .3s ease 0s;
+                }
+            }
+        }
+    }
+    .panel-collapse {
+        .panel-body {
+            p {
+                line-height: 18px;
+                font-size: 12px;
+                margin: 0;
+                color: #8a8a8a;
+                text-transform: uppercase;
+                padding: 0px 60px 42px 30px;
+                @media #{$lg-layout} {
+                    padding: 0px 30px 42px 30px;
+                }
+                @media #{$md-layout} {
+                    padding: 0px 30px 42px 30px;
+                }
+                @media #{$xs-layout} {
+                    padding: 0px 30px 42px 20px;
+                }
+            }
+        }
+    }
+}
+
+
+.single-faq-wrap {
+    @media #{$md-layout} {
+        &.pt-120 {
+            padding-top: 70px;
+        }
+        &.pb-100 {
+            padding-bottom: 60px;
+        }
+    }
+    @media #{$md-layout} {
+        .faq-title {
+            &.mb-60 {
+                margin-bottom: 30px;
+            }
+        }
+    }
+    @media #{$xs-layout} {
+        &.pt-120 {
+            padding-top: 50px;
+        }
+        &.pb-100 {
+            padding-bottom: 30px;
+        }
+    }
+    @media #{$xs-layout} {
+        .faq-title {
+            h2 {
+                font-size: 21px;
+            }
+            &.mb-60 {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+
+
+

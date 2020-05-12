@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'SignPainter HouseScript';
+    src: url('../../fonts/SignPainterHouseScript.eot');
+    src: url('../../fonts/SignPainterHouseScript.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/SignPainterHouseScript.woff2') format('woff2'),
+        url('../../fonts/SignPainterHouseScript.woff') format('woff'),
+        url('../../fonts/SignPainterHouseScript.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+

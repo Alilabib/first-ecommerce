@@ -1,0 +1,86 @@
+/*-------- 14. Brand logo style ---------*/
+
+.brand-logo-active , .brand-logo-active-2 {
+    .single-brand-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &.bl-grayscale {
+            img {
+                filter: grayscale(100%);
+                &:hover {
+                    filter: grayscale(0%);
+                }
+            }
+        }
+    } 
+}
+
+.brand-logo-active , .brand-logo-active-2 , .testimonial-active , .testimonial-active-2 {
+    &.owl-carousel {
+        .owl-item {
+            img {
+                display: inline-block;
+                width: auto;
+            }
+        }
+    }
+}
+.brand-logo-active , .brand-logo-active-2 {
+    &.owl-carousel {
+        .owl-item {
+            img {
+                display: inline-block;
+                width: auto;
+                transform: scale(1);
+                transition: all .3s ease 0s;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+.brand-logo-ptb {
+    padding: 80px 0 60px;
+    @media #{$xs-layout} {
+        padding: 40px 0 30px;
+    }
+}
+
+.brand-logo-ptb-about {
+    padding: 60px 0 60px;
+    @media #{$xs-layout} {
+        padding: 40px 0 40px;
+    }
+}
+
+.kids-brand-logo-ptb {
+    padding: 108px 0;
+    @media #{$md-layout} {
+        padding: 100px 0;
+    }
+    @media #{$xs-layout} {
+        padding: 50px 0;
+    }
+}
+
+@media #{$xs-layout} {
+    .brand-logo-area {
+        &.pt-70 {
+            padding-top: 50px;
+        }
+        &.pb-70 {
+            padding-bottom: 50px;
+        }
+    }
+}
+
+
+
+
+
+
+
+

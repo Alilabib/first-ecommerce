@@ -1,0 +1,185 @@
+/*-------- 13. Categories style ---------*/
+
+.single-featured-categories {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 2px solid #e0e0e0;
+    padding: 30px 30px 30px 60px;
+    @media #{$xx-layout} {
+        padding: 30px 20px 30px 20px;
+    }
+    @media #{$xl-layout} {
+        padding: 30px 15px 30px 15px;
+    }
+    @media #{$lg-layout} {
+        padding: 30px 20px 30px 20px;
+    }
+    @media #{$md-layout} {
+        padding: 30px 15px 30px 15px;
+    }
+    @media #{$xs-layout} {
+        padding: 30px 15px 30px 15px;
+    }
+    .featured-categories-content {
+        flex: 0 0 60%;
+        @media #{$xl-layout} {
+            flex: 0 0 62%;
+        }
+        @media #{$md-layout} {
+            flex: 0 0 70%;
+        }
+        @media #{$xs-layout} {
+            flex: 0 0 60%;
+        }
+        h3 {
+            font-weight: 500;
+            font-size: 20px;
+            color: #1b1b1b;
+            margin: 0;
+            @media #{$xx-layout} {
+                font-size: 16px;
+            }
+            @media #{$xl-layout} {
+                font-size: 16px;
+            }
+            @media #{$lg-layout} {
+                font-size: 18px;
+            }
+            @media #{$md-layout} {
+                font-size: 15px;
+            }
+            @media #{$xs-layout} {
+                font-size: 18px;
+            }
+            a {
+                color: #1b1b1b;
+                &:hover {
+                    color: $theme-color-yellow;
+                }
+            }
+        }
+        p {
+            color: $theme-color-yellow;
+            font-weight: 500;
+            margin: 8px 0 24px;
+        }
+    }
+    .featured-categories-img {
+        flex: 0 0 40%;
+        overflow: hidden;
+        @media #{$xl-layout} {
+            flex: 0 0 38%;
+        }
+        @media #{$md-layout} {
+            flex: 0 0 30%;
+        }
+        @media #{$xs-layout} {
+            flex: 0 0 40%;
+        }
+        a {
+            img {
+                width: 100%;
+                transition: all .5s ease 0s;
+                transform: scale(1);
+            }
+        }
+    }
+    &:hover {
+        .featured-categories-img {
+            a {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+.slick-dot-style-1 {
+    .slick-dots {
+        text-align: center;
+        li {
+            display: inline-block;
+            button {
+                font-size: 0;
+                border: none;
+                padding: 0;
+                background-color: #d8d8d8;
+                width: 19px;
+                height: 19px;
+                border-radius: 100%;
+                display: inline-block;
+                margin: 0 5px;
+                transition: all .3s ease 0s;
+                &:hover {
+                    background-color: $theme-color-yellow;
+                }
+            }
+            &.slick-active {
+                button {
+                    background-color: $theme-color-yellow;
+                }
+            }
+        }
+    }
+} 
+
+.featured-categories-active {
+    .slick-list {
+        margin-right: -12.5px;
+        margin-left: -12.5px;
+        .featured-categories-wrap {
+            padding-left: 12.5px;
+            padding-right: 12.5px;
+        }
+    }
+}
+
+.organic-categories-area {
+    padding: 25px 0 120px;
+    @media #{$xs-layout} {
+        padding: 25px 0 50px;
+    }
+}
+
+.organic-categories-active {
+    &.owl-carousel {
+        .owl-item {
+            .organic-categories-wrap {
+                overflow: hidden;
+                img {
+                    display: inline-block;
+                    width: auto;
+                    max-width: 100%;
+                   transition: all .5s ease 0s;
+                }
+                h3 {
+                    font-size: 36px;
+                    margin: 50px 0 0;
+                    color: #1b1b1b;
+                    font-family: $signpainterhousescript;
+                    a {
+                        color: #1b1b1b;
+                        &:hover {
+                            color: $theme-color-green-3;
+                        }
+                    }
+                    @media #{$xs-layout} {
+                        margin: 25px 0 0;
+                    }
+                }
+                &:hover {
+                    img {
+                       animation: 900ms ease-in-out 0s normal none 1 running jello;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+

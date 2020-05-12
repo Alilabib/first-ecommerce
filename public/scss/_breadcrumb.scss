@@ -1,0 +1,57 @@
+
+/*-------- 20. Breadcrumb style ---------*/
+
+
+.breadcrumb-ptb-1 {
+    padding: 75px 0 85px;
+    @media #{$xs-layout} {
+        padding: 45px 0 55px;
+    }
+}
+
+.breadcrumb-ptb-2 {
+	padding: 0px 0 23px;
+}
+
+.breadcrumb-content {
+    position: relative;
+    z-index: 9;
+    .breadcrumb-title {
+        h2 {
+            font-size: 46px;
+            color: #343434;
+            margin: 0;
+            line-height: 1;
+            @media #{$md-layout} {
+                font-size: 35px;
+            }
+            @media #{$xs-layout} {
+                font-size: 30px;
+            }
+        }
+    }
+    ul {
+        li {
+            display: inline-block;
+            margin: 0 2px;
+            text-transform: capitalize;
+            color: #737373;
+            span {
+                margin-right: 4px;
+                display: inline-block;
+                margin: 6px 4px 0 0;
+                line-height: 1;
+                position: relative;
+                top: 1px;
+            }
+            a {
+               text-transform: capitalize;
+                color: #181818;
+                &:hover {
+                    color: $theme-color-yellow;
+                }
+            }
+        }
+    }
+}
+

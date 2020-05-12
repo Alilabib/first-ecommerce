@@ -1,0 +1,287 @@
+/*-------- 12. Service style ---------*/
+
+.single-service {
+    .service-icon {
+        i {
+            color: $theme-color-yellow;
+            font-size: 66px;
+            transform: rotateY(180deg);
+            display: block;
+            @media #{$lg-layout} {
+                font-size: 55px;
+            }
+            @media #{$md-layout} {
+                font-size: 55px;
+            }
+            @media #{$xs-layout} {
+                font-size: 50px;
+            }
+        }
+    }
+    .service-content {
+        h4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #262626;
+            margin: 29px 0 6px;
+            @media #{$md-layout} {
+                margin: 20px 0 6px;
+            }
+            @media #{$xs-layout} {
+                margin: 20px 0 6px;
+            }
+        }
+        p {
+            font-size: 12px;
+            color: #777777;
+            margin: 0 auto;
+            width: 82%;
+            @media #{$lg-layout} {
+                width: 100%;
+            }
+            @media #{$sm-layout} {
+                width: 68%;
+            }
+        }
+    }
+    &:hover {
+        .service-icon {
+            i {
+                animation: 500ms ease-in-out 0s normal none 1 running zoomIn;
+                transform: rotateY(180deg);
+            }
+        }
+    }
+}
+
+.service-mrg-left {
+    margin-left: -66px;
+    @media #{$xx-layout} {
+        margin-left: 0px;
+    }
+    @media #{$xl-layout} {
+        margin-left: 0px;
+    }
+    @media #{$lg-layout} {
+        margin-left: 0px;
+    }
+    @media #{$md-layout} {
+        margin-left: 0px;
+    }
+    @media #{$xs-layout} {
+        margin-left: 0px;
+    }
+}
+
+.service-mrg-right {
+    margin-right: -66px;
+    @media #{$xx-layout} {
+        margin-right: 0px;
+    }
+    @media #{$xl-layout} {
+        margin-right: 0px;
+    }
+    @media #{$lg-layout} {
+        margin-right: 0px;
+    }
+    @media #{$md-layout} {
+        margin-right: 0px;
+    }
+    @media #{$xs-layout} {
+        margin-right: 0px;
+    }
+}
+
+
+.single-service-2 {
+    .service-icon-2 {
+        i {
+            color: $theme-color-green;
+            font-size: 54px;
+            transform: rotateY(180deg);
+            display: block;
+            @media #{$lg-layout} {
+                font-size: 55px;
+            }
+            @media #{$md-layout} {
+                font-size: 55px;
+            }
+            @media #{$xs-layout} {
+                font-size: 50px;
+            }
+        }
+    }
+    .service-content-2 {
+        h4 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #1b1b1b;
+            font-family: $playfairdisplay;
+            margin: 29px 0 6px;
+            @media #{$lg-layout} {
+                margin: 15px 0 6px;
+            }
+            @media #{$md-layout} {
+                margin: 15px 0 6px;
+            }
+            @media #{$xs-layout} {
+                margin: 15px 0 6px;
+            }
+        }
+        p {
+            margin: 0 auto;
+            width: 81%;
+            @media #{$xx-layout} {
+                width: 100%;
+            }
+            @media #{$xl-layout} {
+                width: 100%;
+            }
+            @media #{$lg-layout} {
+                width: 100%;
+            }
+            @media #{$md-layout} {
+                width: 95%;
+            }
+            @media #{$sm-layout} {
+                width: 68%;
+            }
+        }
+    }
+    &:hover {
+        .service-icon-2 {
+            i {
+                animation: 500ms ease-in-out 0s normal none 1 running zoomIn;
+                transform: rotateY(180deg);
+            }
+        }
+    }
+}
+
+.service-wrap-3 {
+	margin: 0 -134px;
+    @media #{$xx-layout} {
+        margin: 0 0px;
+    }
+    @media #{$xl-layout} {
+        margin: 0 0px;
+    }
+    @media #{$lg-layout} {
+        margin: 0 0px;
+    }
+    @media #{$md-layout} {
+        margin: 0 0px;
+    }
+    @media #{$xs-layout} {
+        margin: 0 0px;
+    }
+}
+
+.single-service-3 {
+    .service-icon-3 {
+        margin: 0 0 45px;
+        @media #{$xx-layout} {
+            margin: 0 0 30px;
+        }
+        @media #{$xl-layout} {
+            margin: 0 0 30px;
+        }
+        @media #{$lg-layout} {
+            margin: 0 0 30px;
+        }
+        @media #{$md-layout} {
+            margin: 0 0 25px;
+        }
+        @media #{$xs-layout} {
+            margin: 0 0 15px;
+        }
+        img {
+            width: 234px;
+            @media #{$xx-layout} {
+                width: 130px;
+            }
+            @media #{$xl-layout} {
+                width: 100px;
+            }
+            @media #{$lg-layout} {
+                width: 100px;
+            }
+            @media #{$md-layout} {
+                width: 60px;
+            }
+            @media #{$xs-layout} {
+                width: 50px;
+            }
+        }
+    }
+    .service-content-3 {
+        h3 {
+            color: #1b1b1b;
+            font-size: 36px;
+            margin: 0 0 12px;
+            font-family: $fredokaone;
+            line-height: 1;
+            @media #{$lg-layout} {
+                font-size: 30px;
+            }
+            @media #{$md-layout} {
+                font-size: 25px;
+                margin: 0 0 8px;
+            }
+            @media #{$xs-layout} {
+                font-size: 23px;
+                margin: 0 0 8px;
+            }
+        }
+        p {
+            font-size: 24px;
+            line-height: 37px;
+            margin: 0;
+            @media #{$lg-layout} {
+                font-size: 19px;
+                line-height: 30px;
+            }
+            @media #{$md-layout} {
+                font-size: 18px;
+                line-height: 30px;
+            }
+            @media #{$xs-layout} {
+                font-size: 16px;
+                line-height: 27px;
+            }
+        }
+    }
+    &:hover {
+        .service-icon-3 {
+            img {
+                animation: 500ms ease-in-out 0s normal none 1 running tada;
+            }
+        }
+    }
+}
+
+@media #{$md-layout} {
+    .service-area {
+        .pb-85 {
+            padding-bottom: 50px;
+        }
+    }
+}
+
+@media #{$xs-layout} {
+    .service-area {
+        .pb-85 {
+            padding-bottom: 20px;
+        }
+        &.pb-70 {
+            padding-bottom: 12px;
+        }
+    }
+}
+
+
+
+
+
+
+

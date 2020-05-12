@@ -1,0 +1,199 @@
+/*-------- 7. Video style ---------*/
+
+.youtube-video-height {
+    height: 610px !important;
+    padding: 0 !important;
+    @media #{$xl-layout} {
+        height: 500px !important;
+    }
+    @media #{$lg-layout} {
+        height: 500px !important;
+    }
+    @media #{$md-layout} {
+        height: 450px !important;
+    }
+    @media #{$xs-layout} {
+        height: 300px !important;
+    }
+}
+
+.video-wrap {
+    position: relative;
+    .video-content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        left: 50%;
+        z-index: 9;
+        h2 {
+            font-size: 120px;
+            color: #fff;
+            font-weight: bold;
+            border: 15px solid #fff;
+            line-height: 1;
+            padding: 53px 50px 53px;
+            margin: 0;
+            @media #{$lg-layout} {
+                padding: 40px 50px 40px;
+                font-size: 100px;
+            }
+            @media #{$md-layout} {
+                padding: 30px 50px 30px;
+                font-size: 100px;
+            }
+            @media #{$xs-layout} {
+                font-size: 40px;
+                padding: 25px 30px 24px;
+            }
+        }
+    }
+}
+.cake-video-ptb {
+    padding: 352px 0 352px;
+    @media #{$xl-layout} {
+        padding: 200px 0 200px;
+    }
+    @media #{$lg-layout} {
+        padding: 220px 0 180px;
+    }
+    @media #{$md-layout} {
+        padding: 200px 0 160px;
+    }
+    @media #{$xs-layout} {
+        padding: 130px 0 100px;
+    }
+}
+
+.cake-video-content {
+    position: relative;
+    z-index: 9;
+    h2 {
+        color: #fff;
+        font-size: 80px;
+        margin: 0;
+        font-family: $signpainterhousescript;
+        @media #{$md-layout} {
+            font-size: 65px;
+        }
+        @media #{$xs-layout} {
+            font-size: 45px;
+        }
+    }
+    h1 {
+        color: #fff;
+        font-size: 100px;
+        margin: 3px 0 16px;
+        font-family: $signpainterhousescript;
+        @media #{$lg-layout} {
+            font-size: 90px;
+            margin: 3px 0 12px;
+        }
+        @media #{$md-layout} {
+            font-size: 75px;
+        }
+        @media #{$xs-layout} {
+            font-size: 35px;
+        }
+    }
+    .video-btn-2 {
+        a {
+            display: inline-block;
+            width: 105px;
+            height: 105px;
+            text-align: center;
+            line-height: 105px;
+            background-color: $theme-color-pink;
+            color: #fff;
+            border-radius: 100%;
+            font-size: 20px;
+            position: relative;
+            @media #{$xs-layout} {
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+            }
+            i {
+                line-height: 105px;
+                @media #{$xs-layout} {
+                    line-height: 60px;
+                }
+            }
+            &::before {
+                animation: 1500ms ease-out 0s normal none infinite running border-jump;
+                background: #ef8da1 none repeat scroll 0 0;
+                border-radius: 50%;
+                content: "";
+                display: block;
+                height: 90px;
+                left: 50%;
+                position: absolute;
+                top: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                width: 90px;
+                z-index: -1;
+                @media #{$xs-layout} {
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+            &::after {
+                background: #ef8da1 none repeat scroll 0 0;
+                border-radius: 50%;
+                content: "";
+                display: block;
+                height: 90px;
+                left: 50%;
+                position: absolute;
+                top: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                transition: all 200ms ease 0s;
+                width: 90px;
+                z-index: -1;
+                @media #{$xs-layout} {
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+            &:hover {
+                background-color: #191919;
+                color: #fff;
+            }
+        }
+    }
+}
+
+@-webkit-keyframes border-jump {
+    0% {
+        -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+        opacity: 1;
+        border-radius: 100%;
+    }
+    100% {
+        -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+        opacity: 0;
+        border-radius: 100%;
+    }
+}
+
+@keyframes border-jump {
+    0% {
+        -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+        opacity: 1;
+        border-radius: 100%;
+    }
+    100% {
+        -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+        opacity: 0;
+        border-radius: 100%;
+    }
+}
+
+
+
+
+
+

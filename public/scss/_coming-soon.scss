@@ -1,0 +1,88 @@
+/*-------- 29. Coming soon style ---------*/
+
+.comming-soon-content {
+    h1 {
+        font-size: 100px;
+        color: #fff;
+        line-height: 1;
+        margin: 0;
+        font-family: $playfairdisplay;
+        @media #{$xx-layout} {
+            font-size: 80px;
+        }
+        @media #{$xl-layout} {
+            font-size: 80px;
+        }
+        @media #{$lg-layout} {
+            font-size: 80px;
+        }
+        @media #{$md-layout} {
+            font-size: 70px;
+        }
+        @media #{$xs-layout} {
+            font-size: 32px;
+        }
+        @media #{$sm-layout} {
+            font-size: 40px;
+        }
+    }
+    .comming-soon-timer {
+        margin: 60px 0 36px;
+        @media #{$md-layout} {
+            margin: 40px 0 36px;
+        }
+        @media #{$xs-layout} {
+            margin: 30px 0 30px;
+        }
+        div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            > span {
+                color: #fff;
+                margin: 0 40px;
+                @media #{$lg-layout} {
+                    margin: 0 30px;
+                }
+                @media #{$md-layout} {
+                    margin: 0 20px;
+                }
+                @media #{$xs-layout} {
+                    margin: 0 10px;
+                }
+                > span {
+                    font-size: 32px;
+                }
+                > p {
+                    color: #fff;
+                    font-size: 18px;
+                    margin: 7px 0 0;
+                }
+            }
+        }
+    }
+}
+
+.comming-soon-btn , .error-btn {
+    a {
+        display: inline-block;
+        line-height: 1;
+        color: #fff;
+        border: 2px solid #fff;
+        text-transform: uppercase;
+        z-index: 2;
+        font-size: 16px;
+        padding: 18px 33px;
+        transition: all .5s ease-in-out 0s;
+        &:hover {
+            border: 2px solid transparent;
+        }
+    }
+}
+
+
+
+
+
+
+
