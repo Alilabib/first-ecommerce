@@ -1,106 +1,178 @@
-<html class="no-js" lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>E-Commerce</title>
-    <meta name="robots" content="noindex, follow" />
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <%- include('../includes/styles') %>
-</head>
 
 
-<body>
-
-    <div class="main-wrapper">
-        <%- include('../includes/header') %>
-
-            <%- include('../includes/sidebar') %>
-
-                <!-- mini cart start -->
-                <%- include('../includes/mini_cart') %>
-
-                    <!-- Mobile menu start -->
-                    <%- include('../includes/mobile_menu') %>
-
-                        <div class="slider-area">
-                            <div class="single-main-slider bg-img slider-height-3 align-items-center custom-d-flex" style="background-image:url(1.jpeg);">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="main-hero-content-1">
-                                                <h1>The Wonderful <br>ThingsYou Will Be</h1>
-                                                <div class="slider-btn-2 btn-hover">
-                                                    <a class="animated slider-btn-2-bg-yellow slider-btn-2-ptb bg-black-hover" href="product-details.html">Shop now </a>
-                                                </div>
-                                                <div class="coupoun-version-wrap">
-                                                    <a href="#">Get Coupoun Code</a>
-                                                    <a href="#">Kindle Version</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+        <div class="slider-area">
+            <div class="single-main-slider bg-img slider-height-3 align-items-center custom-d-flex" style="background-image:url(1.jpeg);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="main-hero-content-1">
+                                <h1>The Wonderful <br>ThingsYou Will Be</h1>
+                                <div class="slider-btn-2 btn-hover">
+                                    <a class="animated slider-btn-2-bg-yellow slider-btn-2-ptb bg-black-hover" href="product-details.html">Shop now </a>
                                 </div>
-                                <div class="hero-book-img-position">
-                                    <img src="5.jpg" alt="" style="opacity: 9%;
-                                    width: 120px;
-                                    height: 120px;
-                                    border-radius: 120px;">
+                                <div class="coupoun-version-wrap">
+                                    <a href="#">Get Coupoun Code</a>
+                                    <a href="#">Kindle Version</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="bookstore-area section-padding-1 bg-img pt-195 pb-205" style="background-image:url(6.jpg);">
-                            <div class="container-fluid">
-                                <div class="section-title-4 text-center mb-55">
-                                    <h2>Welcome to Young Bookstore</h2>
-                                    <p>Young is a monthly book review publication distributed to 400,000 avid readers through subscribing bookstores and public libraries.</p>
+                    </div>
+                </div>
+                <div class="hero-book-img-position">
+                    <img src="5.jpg" alt="" style="opacity: 9%;
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 120px;">
+                </div>
+            </div>
+        </div>
+        <div class="bookstore-area section-padding-1 bg-img pt-195 pb-205" style="background-image:url(6.jpg);">
+            <div class="container-fluid">
+                <div class="section-title-4 text-center mb-55">
+                    <h2>Welcome to Young </h2>
+                    <p>Young is a monthly product review publication distributed to 400,000 avid readers through subscribing stores .</p>
+                </div>
+                <div class="bookstore-active owl-carousel nav-style-3 bg-gray-3">
+                    <div class="single-bookstore text-center">
+                        <i class=" ti-image "></i>
+                        <h3><a href="/category/?category=men">Men</a></h3>
+                    </div>
+                    <div class="single-bookstore text-center">
+                        <i class=" ti-bar-chart "></i>
+                        <h3><a href="/category/?category=men">Woman</a> </h3>
+                    </div>
+        
+                    <div class="single-bookstore text-center">
+                        <i class=" ti-face-smile "></i>
+                        <h3><a href="/category/?category=children"> Children’s</a></h3>
+                    </div>
+                    <div class="single-bookstore text-center">
+                        <i class=" ti-user "></i>
+                        <h3><a href="javascript:;">Sport</a> </h3>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+        <div class="product-area bg-gray pt-110 pb-115">
+            <div class="container">
+                <div class="section-title-5-wrap mb-60">
+                    <div class="section-title-5">
+                        <h2>Featured Books on <br>Young Store</h2>
+                    </div>
+                    <div class="section-title-5-right">
+                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas venenatis posuere volutpat dauris laore Sed non sem blandit,</p>
+                    </div>
+                </div>
+            </div>
+            <div class="product-book-slider">
+                <% if (typeof(products1) != undefined){ %>
+                <% for( let product of products1){ %>
+                    <div class="product-plr-opacity">
+                        <div class="product-wrap">
+                            <div class="product-img pro-theme-color-border mb-25">
+                                <a href="/product/<%= product._id %>">
+                                    <img src="<%= product.image %>" alt="">
+                                </a>
+                                <div class="product-action product-action-position-1 ">
+                                    <a title="Add to Cart" href="/cart"><i class="fa fa-cart-arrow-down"></i></a>
+                                    <a data-toggle="modal" data-target="#exampleModal" href="#"><i class="fa fa-search-plus"></i></a>
+                                    <a title="Add to Wishlist" href="/whishlist"><i class="fa fa-heart-o"></i></a>
+                                    <a title="Add to Compare" href="/compare"><i class="fa fa-compress"></i></a>
                                 </div>
-                                <div class="bookstore-active owl-carousel nav-style-3 bg-gray-3">
-                                    <div class="single-bookstore text-center">
-                                        <i class=" ti-image "></i>
-                                        <h3><a href="#">Art & Photography</a></h3>
+                            </div>
+                            <div class="product-content-2">
+                                <h4><a href="/product/<%= product._id %>"><%= product.name %> </a></h4>
+                                <span><a href="#"><%= product.description %> </a></span>
+                                <div class="product-rating-wrap">
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-half-o"></i>
                                     </div>
-                                    <div class="single-bookstore text-center">
-                                        <i class=" ti-bar-chart "></i>
-                                        <h3><a href="#">Business & Investing</a> </h3>
-                                    </div>
-                                    <div class="single-bookstore text-center">
-                                        <i class=" ti-heart "></i>
-                                        <h3><a href="#"> Romance & Love</a></h3>
-                                    </div>
-                                    <div class="single-bookstore text-center">
-                                        <i class=" ti-face-smile "></i>
-                                        <h3><a href="#"> Children’s</a></h3>
-                                    </div>
-                                    <div class="single-bookstore text-center">
-                                        <i class=" ti-user "></i>
-                                        <h3><a href="#">Cookbooks, Food</a> </h3>
-                                    </div>
-                                    <div class="single-bookstore text-center">
-                                        <i class=" ti-heart "></i>
-                                        <h3><a href="#"> Romance & Love</a></h3>
-                                    </div>
+                                </div>
+                                <div class="product-price-2">
+                                    <span class="new-price"><%= product.price %> $</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="product-area bg-gray pt-110 pb-115">
-                            <div class="container">
-                                <div class="section-title-5-wrap mb-60">
-                                    <div class="section-title-5">
-                                        <h2>Featured Books on <br>Young Store</h2>
-                                    </div>
-                                    <div class="section-title-5-right">
-                                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas venenatis posuere volutpat dauris laore Sed non sem blandit,</p>
-                                    </div>
+                    </div>
+                <%}%>
+                <%}%>
+
+            </div>
+        </div>
+        <div class="author-book-area pt-150 pb-115">
+            <div class="book-leaf-1">
+                <img src="/images/icon-img/leaf-1.png" alt="leaf">
+            </div>
+            <div class="book-leaf-2">
+                <img src="/images/icon-img/leaf-2.png" alt="leaf">
+            </div>
+            <div class="book-leaf-3">
+                <img src="/images/icon-img/leaf-3.png" alt="leaf">
+            </div>
+            <div class="book-leaf-4">
+                <img src="/images/icon-img/leaf-4.png" alt="leaf">
+            </div>
+            <div class="book-leaf-5">
+                <img src="/images/icon-img/leaf-5.png" alt="leaf">
+            </div>
+            <div class="book-leaf-6">
+                <img src="/images/icon-img/leaf-6.png" alt="leaf">
+            </div>
+            <div class="book-leaf-7">
+                <img src="/images/icon-img/leaf-7.png" alt="leaf">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="author-book-img">
+                            <img src="/images/banner/author-book.png" alt="banner">
+                            <div class="book-leaf-8">
+                                <img src="/images/icon-img/leaf-8.png" alt="leaf">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="author-book-text">
+                            <span>Featured Author This Month</span>
+                            <h2>Susan Choi wins fiction <br>prizefor Trust Exercise</h2>
+                            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas venenatis posuere volutpat dauris laore Sed non sem blandit,</p>
+                            <div class="yearly-best-seller">
+                                <div class="yearly-best-seller-img">
+                                    <img src="/images/icon-img/year.png" alt="banner">
+                                </div>
+                                <div class="yearly-best-seller-content">
+                                    <h4><a href="#">Bestseller Book of the year</a></h4>
                                 </div>
                             </div>
-                            <div class="product-book-slider">
-                                <div class="product-plr-opacity">
+                            <div class="slider-btn-2 btn-hover">
+                                <a class="animated slider-btn-2-bg-white slider-btn-3-ptb bg-black-hover" href="product-details.html">View Her Books </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-area bg-gray-4 pt-120 pb-110">
+            <div class="container-fluid p-0">
+                <div class="newbooks-pl ">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-lg-4">
+                            <div class="section-title-5 mb-60">
+                                <h2>New Books This <br>Week</h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="new-book-slider dot-style-2">
+                                <div class="product-plr-2">
                                     <div class="product-wrap">
                                         <div class="product-img pro-theme-color-border mb-25">
                                             <a href="product-details.html">
-                                                <img src="/images/product/book-product-1.png" alt="">
+                                                <img src="/images/product/book-product-6.png" alt="">
                                             </a>
                                             <div class="product-action product-action-position-1 pro-action-theme-color">
                                                 <a title="Add to Cart" href="#"><i class="fa fa-cart-arrow-down"></i></a>
@@ -110,8 +182,8 @@
                                             </div>
                                         </div>
                                         <div class="product-content-2">
-                                            <h4><a href="product-details.html">Ask Again, Yes: A Novel Hardcover – May 28, 2019</a></h4>
-                                            <span><a href="#">by Mary Beth Keane  (Author)</a></span>
+                                            <h4><a href="product-details.html">Prayer Journal for Women: 52 Week Scripture</a></h4>
+                                            <span><a href="#">by Shannon Roberts  (Author)</a></span>
                                             <div class="product-rating-wrap">
                                                 <div class="product-rating">
                                                     <i class="fa fa-star"></i>
@@ -127,11 +199,42 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="product-plr-opacity">
+                                <div class="product-plr-2">
                                     <div class="product-wrap">
                                         <div class="product-img pro-theme-color-border mb-25">
                                             <a href="product-details.html">
-                                                <img src="/images/product/book-product-2.png" alt="">
+                                                <img src="/images/product/book-product-7.png" alt="">
+                                            </a>
+                                            <div class="product-action product-action-position-1 pro-action-theme-color">
+                                                <a title="Add to Cart" href="#"><i class="fa fa-cart-arrow-down"></i></a>
+                                                <a data-toggle="modal" data-target="#exampleModal" href="#"><i class="fa fa-search-plus"></i></a>
+                                                <a title="Add to Wishlist" href="#"><i class="fa fa-heart-o"></i></a>
+                                                <a title="Add to Compare" href="#"><i class="fa fa-compress"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-2">
+                                            <h4><a href="product-details.html">Dirty Letters Kindle Edition</a></h4>
+                                            <span><a href="#">by Vi Keeland  (Author)</a></span>
+                                            <div class="product-rating-wrap">
+                                                <div class="product-rating">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star-half-o"></i>
+                                                </div>
+                                            </div>
+                                            <div class="product-price-2">
+                                                <span class="new-price">$59.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-plr-2">
+                                    <div class="product-wrap">
+                                        <div class="product-img pro-theme-color-border mb-25">
+                                            <a href="product-details.html">
+                                                <img src="/images/product/book-product-8.png" alt="">
                                             </a>
                                             <div class="product-action product-action-position-1 pro-action-theme-color">
                                                 <a title="Add to Cart" href="#"><i class="fa fa-cart-arrow-down"></i></a>
@@ -158,583 +261,275 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="product-plr-opacity">
-                                    <div class="product-wrap">
-                                        <div class="product-img pro-theme-color-border mb-25">
-                                            <a href="product-details.html">
-                                                <img src="/images/product/book-product-3.png" alt="">
-                                            </a>
-                                            <div class="product-action product-action-position-1 pro-action-theme-color">
-                                                <a title="Add to Cart" href="#"><i class="fa fa-cart-arrow-down"></i></a>
-                                                <a data-toggle="modal" data-target="#exampleModal" href="#"><i class="fa fa-search-plus"></i></a>
-                                                <a title="Add to Wishlist" href="#"><i class="fa fa-heart-o"></i></a>
-                                                <a title="Add to Compare" href="#"><i class="fa fa-compress"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="product-content-2">
-                                            <h4><a href="product-details.html">Dad Jokes: Terribly Good Dad Jokes Paperback – Large Print, November 2, 2017</a></h4>
-                                            <span><a href="#">by Mary Beth Keane  (Author)</a></span>
-                                            <div class="product-price-2">
-                                                <span class="new-price">$59.00</span>
-                                            </div>
-                                        </div>
-                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-area pt-150 pb-150 bg-img" style="background-image:url(/images/bg/book-bg-3.jpg);">
+            <div class="container">
+                <div class="testimonial-active owl-carousel">
+                    <div class="single-testimonial-2 text-center">
+                        <div class="testimonial-2-inner">
+                            <div class="testimonial-quote-2">
+                                <div class="quote-2-icon">
+                                    <i class="fa fa-quote-right"></i>
                                 </div>
-                                <div class="product-plr-opacity">
-                                    <div class="product-wrap">
-                                        <div class="product-img pro-theme-color-border mb-25">
-                                            <a href="product-details.html">
-                                                <img src="/images/product/book-product-4.png" alt="">
-                                            </a>
-                                            <div class="product-action product-action-position-1 pro-action-theme-color">
-                                                <a title="Add to Cart" href="#"><i class="fa fa-cart-arrow-down"></i></a>
-                                                <a data-toggle="modal" data-target="#exampleModal" href="#"><i class="fa fa-search-plus"></i></a>
-                                                <a title="Add to Wishlist" href="#"><i class="fa fa-heart-o"></i></a>
-                                                <a title="Add to Compare" href="#"><i class="fa fa-compress"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="product-content-2">
-                                            <h4><a href="product-details.html">Photographing the Dead (Nameless Book 2)</a></h4>
-                                            <span><a href="#">by Dean Koontz  (Author)</a></span>
-                                            <div class="product-rating-wrap">
-                                                <div class="product-rating">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star-half-o"></i>
-                                                </div>
-                                            </div>
-                                            <div class="product-price-2">
-                                                <span class="new-price">$59.00</span>
-                                            </div>
-                                        </div>
-                                    </div>
+                            </div>
+                            <p>Books don’ts change people; paragraphs do, sometimes even sentences.</p>
+                            <div class="client-info-2">
+                                <span>Daniel Romero</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-testimonial-2 text-center">
+                        <div class="testimonial-2-inner">
+                            <div class="testimonial-quote-2">
+                                <div class="quote-2-icon">
+                                    <i class="fa fa-quote-right"></i>
                                 </div>
-                                <div class="product-plr-opacity">
-                                    <div class="product-wrap">
-                                        <div class="product-img pro-theme-color-border mb-25">
-                                            <a href="product-details.html">
-                                                <img src="/images/product/book-product-3.png" alt="">
-                                            </a>
-                                            <div class="product-action product-action-position-1 pro-action-theme-color">
-                                                <a title="Add to Cart" href="#"><i class="fa fa-cart-arrow-down"></i></a>
-                                                <a data-toggle="modal" data-target="#exampleModal" href="#"><i class="fa fa-search-plus"></i></a>
-                                                <a title="Add to Wishlist" href="#"><i class="fa fa-heart-o"></i></a>
-                                                <a title="Add to Compare" href="#"><i class="fa fa-compress"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="product-content-2">
-                                            <h4><a href="product-details.html">Dad Jokes: Terribly Good Dad Jokes Paperback – Large Print, November 2, 2017</a></h4>
-                                            <span><a href="#">by Mary Beth Keane  (Author)</a></span>
-                                            <div class="product-price-2">
-                                                <span class="new-price">$59.00</span>
-                                            </div>
-                                        </div>
-                                    </div>
+                            </div>
+                            <p>Books don’ts change people; paragraphs do, sometimes even sentences.</p>
+                            <div class="client-info-2">
+                                <span>Daniel Romero</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-area section-padding-3 pt-110 pb-60 padding-60-row-col">
+            <div class="container-fluid">
+                <div class="section-title-5 mb-60 section-border-center text-center">
+                    <h2>Book On Sale</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+                        <div class="product-wrap mb-55">
+                            <div class="product-img pro-theme-color-border mb-25">
+                                <a href="product-details.html">
+                                    <img src="/images/product/book-product-9.png" alt="">
+                                </a>
+                                <span class="badge-theme-color badge-right-20 badge-top-20 badge-ptb-1">-25%</span>
+                                <div class="product-action product-action-position-1 pro-action-theme-color">
+                                    <a title="Add to Cart" href="#"><i class="fa fa-cart-arrow-down"></i></a>
+                                    <a data-toggle="modal" data-target="#exampleModal" href="#"><i class="fa fa-search-plus"></i></a>
+                                    <a title="Add to Wishlist" href="#"><i class="fa fa-heart-o"></i></a>
+                                    <a title="Add to Compare" href="#"><i class="fa fa-compress"></i></a>
                                 </div>
-                                <div class="product-plr-opacity">
-                                    <div class="product-wrap">
-                                        <div class="product-img pro-theme-color-border mb-25">
-                                            <a href="product-details.html">
-                                                <img src="/images/product/book-product-2.png" alt="">
-                                            </a>
-                                            <div class="product-action product-action-position-1 pro-action-theme-color">
-                                                <a title="Add to Cart" href="#"><i class="fa fa-cart-arrow-down"></i></a>
-                                                <a data-toggle="modal" data-target="#exampleModal" href="#"><i class="fa fa-search-plus"></i></a>
-                                                <a title="Add to Wishlist" href="#"><i class="fa fa-heart-o"></i></a>
-                                                <a title="Add to Compare" href="#"><i class="fa fa-compress"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="product-content-2">
-                                            <h4><a href="product-details.html">City of Girls: A Novel Hardcover – June 4, 2019</a></h4>
-                                            <span><a href="#">by Elizabeth Gilbert  (Author)</a></span>
-                                            <div class="product-rating-wrap">
-                                                <div class="product-rating">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star-half-o"></i>
-                                                </div>
-                                            </div>
-                                            <div class="product-price-2">
-                                                <span class="new-price">$59.00</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-plr-opacity">
-                                    <div class="product-wrap">
-                                        <div class="product-img pro-theme-color-border mb-25">
-                                            <a href="product-details.html">
-                                                <img src="/images/product/book-product-5.png" alt="">
-                                            </a>
-                                            <div class="product-action product-action-position-1 pro-action-theme-color">
-                                                <a title="Add to Cart" href="#"><i class="fa fa-cart-arrow-down"></i></a>
-                                                <a data-toggle="modal" data-target="#exampleModal" href="#"><i class="fa fa-search-plus"></i></a>
-                                                <a title="Add to Wishlist" href="#"><i class="fa fa-heart-o"></i></a>
-                                                <a title="Add to Compare" href="#"><i class="fa fa-compress"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="product-content-2">
-                                            <h4><a href="product-details.html">Good Days Start With Gratitude</a></h4>
-                                            <span><a href="#">by Pretty Simple Press  (Author)</a></span>
-                                            <div class="product-rating-wrap">
-                                                <div class="product-rating">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star-half-o"></i>
-                                                </div>
-                                            </div>
-                                            <div class="product-price-2">
-                                                <span class="new-price">$59.00</span>
-                                            </div>
-                                        </div>
-                                    </div>
+                            </div>
+                            <div class="product-content-2 pc-2-font-dec">
+                                <h4><a href="product-details.html">Prayer Journal for Women: 52 Week Scripture</a></h4>
+                                <span><a href="#">by Shannon Roberts  (Author)</a></span>
+                                <div class="product-price-2">
+                                    <span class="old-price">$45.00</span>
+                                    <span class="new-price">$20.00</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="author-book-area pt-150 pb-115">
-                            <div class="book-leaf-1">
-                                <img src="/images/icon-img/leaf-1.png" alt="leaf">
+                    </div>
+                    <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+                        <div class="product-wrap mb-55">
+                            <div class="product-img pro-theme-color-border mb-25">
+                                <a href="product-details.html">
+                                    <img src="/images/product/book-product-10.png" alt="">
+                                </a>
+                                <span class="badge-theme-color badge-right-20 badge-top-20 badge-ptb-1">-35%</span>
+                                <div class="product-action product-action-position-1 pro-action-theme-color">
+                                    <a title="Add to Cart" href="#"><i class="fa fa-cart-arrow-down"></i></a>
+                                    <a data-toggle="modal" data-target="#exampleModal" href="#"><i class="fa fa-search-plus"></i></a>
+                                    <a title="Add to Wishlist" href="#"><i class="fa fa-heart-o"></i></a>
+                                    <a title="Add to Compare" href="#"><i class="fa fa-compress"></i></a>
+                                </div>
                             </div>
-                            <div class="book-leaf-2">
-                                <img src="/images/icon-img/leaf-2.png" alt="leaf">
-                            </div>
-                            <div class="book-leaf-3">
-                                <img src="/images/icon-img/leaf-3.png" alt="leaf">
-                            </div>
-                            <div class="book-leaf-4">
-                                <img src="/images/icon-img/leaf-4.png" alt="leaf">
-                            </div>
-                            <div class="book-leaf-5">
-                                <img src="/images/icon-img/leaf-5.png" alt="leaf">
-                            </div>
-                            <div class="book-leaf-6">
-                                <img src="/images/icon-img/leaf-6.png" alt="leaf">
-                            </div>
-                            <div class="book-leaf-7">
-                                <img src="/images/icon-img/leaf-7.png" alt="leaf">
-                            </div>
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="author-book-img">
-                                            <img src="/images/banner/author-book.png" alt="banner">
-                                            <div class="book-leaf-8">
-                                                <img src="/images/icon-img/leaf-8.png" alt="leaf">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="author-book-text">
-                                            <span>Featured Author This Month</span>
-                                            <h2>Susan Choi wins fiction <br>prizefor Trust Exercise</h2>
-                                            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas venenatis posuere volutpat dauris laore Sed non sem blandit,</p>
-                                            <div class="yearly-best-seller">
-                                                <div class="yearly-best-seller-img">
-                                                    <img src="/images/icon-img/year.png" alt="banner">
-                                                </div>
-                                                <div class="yearly-best-seller-content">
-                                                    <h4><a href="#">Bestseller Book of the year</a></h4>
-                                                </div>
-                                            </div>
-                                            <div class="slider-btn-2 btn-hover">
-                                                <a class="animated slider-btn-2-bg-white slider-btn-3-ptb bg-black-hover" href="product-details.html">View Her Books </a>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div class="product-content-2 pc-2-font-dec">
+                                <h4><a href="product-details.html">The Virgin Gift Kindle Edition</a></h4>
+                                <span><a href="#">by Lauren Blakely  (Author)</a></span>
+                                <div class="product-price-2">
+                                    <span class="old-price">$70.00</span>
+                                    <span class="new-price">$30.00</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="product-area bg-gray-4 pt-120 pb-110">
-                            <div class="container-fluid p-0">
-                                <div class="newbooks-pl ">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col-lg-4">
-                                            <div class="section-title-5 mb-60">
-                                                <h2>New Books This <br>Week</h2>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8">
-                                            <div class="new-book-slider dot-style-2">
-                                                <div class="product-plr-2">
-                                                    <div class="product-wrap">
-                                                        <div class="product-img pro-theme-color-border mb-25">
-                                                            <a href="product-details.html">
-                                                                <img src="/images/product/book-product-6.png" alt="">
-                                                            </a>
-                                                            <div class="product-action product-action-position-1 pro-action-theme-color">
-                                                                <a title="Add to Cart" href="#"><i class="fa fa-cart-arrow-down"></i></a>
-                                                                <a data-toggle="modal" data-target="#exampleModal" href="#"><i class="fa fa-search-plus"></i></a>
-                                                                <a title="Add to Wishlist" href="#"><i class="fa fa-heart-o"></i></a>
-                                                                <a title="Add to Compare" href="#"><i class="fa fa-compress"></i></a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="product-content-2">
-                                                            <h4><a href="product-details.html">Prayer Journal for Women: 52 Week Scripture</a></h4>
-                                                            <span><a href="#">by Shannon Roberts  (Author)</a></span>
-                                                            <div class="product-rating-wrap">
-                                                                <div class="product-rating">
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star-half-o"></i>
-                                                                </div>
-                                                            </div>
-                                                            <div class="product-price-2">
-                                                                <span class="new-price">$59.00</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="product-plr-2">
-                                                    <div class="product-wrap">
-                                                        <div class="product-img pro-theme-color-border mb-25">
-                                                            <a href="product-details.html">
-                                                                <img src="/images/product/book-product-7.png" alt="">
-                                                            </a>
-                                                            <div class="product-action product-action-position-1 pro-action-theme-color">
-                                                                <a title="Add to Cart" href="#"><i class="fa fa-cart-arrow-down"></i></a>
-                                                                <a data-toggle="modal" data-target="#exampleModal" href="#"><i class="fa fa-search-plus"></i></a>
-                                                                <a title="Add to Wishlist" href="#"><i class="fa fa-heart-o"></i></a>
-                                                                <a title="Add to Compare" href="#"><i class="fa fa-compress"></i></a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="product-content-2">
-                                                            <h4><a href="product-details.html">Dirty Letters Kindle Edition</a></h4>
-                                                            <span><a href="#">by Vi Keeland  (Author)</a></span>
-                                                            <div class="product-rating-wrap">
-                                                                <div class="product-rating">
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star-half-o"></i>
-                                                                </div>
-                                                            </div>
-                                                            <div class="product-price-2">
-                                                                <span class="new-price">$59.00</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="product-plr-2">
-                                                    <div class="product-wrap">
-                                                        <div class="product-img pro-theme-color-border mb-25">
-                                                            <a href="product-details.html">
-                                                                <img src="/images/product/book-product-8.png" alt="">
-                                                            </a>
-                                                            <div class="product-action product-action-position-1 pro-action-theme-color">
-                                                                <a title="Add to Cart" href="#"><i class="fa fa-cart-arrow-down"></i></a>
-                                                                <a data-toggle="modal" data-target="#exampleModal" href="#"><i class="fa fa-search-plus"></i></a>
-                                                                <a title="Add to Wishlist" href="#"><i class="fa fa-heart-o"></i></a>
-                                                                <a title="Add to Compare" href="#"><i class="fa fa-compress"></i></a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="product-content-2">
-                                                            <h4><a href="product-details.html">City of Girls: A Novel Hardcover – June 4, 2019</a></h4>
-                                                            <span><a href="#">by Elizabeth Gilbert  (Author)</a></span>
-                                                            <div class="product-rating-wrap">
-                                                                <div class="product-rating">
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star-half-o"></i>
-                                                                </div>
-                                                            </div>
-                                                            <div class="product-price-2">
-                                                                <span class="new-price">$59.00</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+                        <div class="product-wrap mb-55">
+                            <div class="product-img pro-theme-color-border mb-25">
+                                <a href="product-details.html">
+                                    <img src="/images/product/book-product-11.png" alt="">
+                                </a>
+                                <span class="badge-theme-color badge-right-20 badge-top-20 badge-ptb-1">-45%</span>
+                                <div class="product-action product-action-position-1 pro-action-theme-color">
+                                    <a title="Add to Cart" href="#"><i class="fa fa-cart-arrow-down"></i></a>
+                                    <a data-toggle="modal" data-target="#exampleModal" href="#"><i class="fa fa-search-plus"></i></a>
+                                    <a title="Add to Wishlist" href="#"><i class="fa fa-heart-o"></i></a>
+                                    <a title="Add to Compare" href="#"><i class="fa fa-compress"></i></a>
+                                </div>
+                            </div>
+                            <div class="product-content-2 pc-2-font-dec">
+                                <h4><a href="product-details.html">The Lineup Kindle Edition</a></h4>
+                                <span><a href="#">by Shannon Roberts  (Author)</a></span>
+                                <div class="product-price-2">
+                                    <span class="old-price">$75.00</span>
+                                    <span class="new-price">$50.00</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="testimonial-area pt-150 pb-150 bg-img" style="background-image:url(/images/bg/book-bg-3.jpg);">
-                            <div class="container">
-                                <div class="testimonial-active owl-carousel">
-                                    <div class="single-testimonial-2 text-center">
-                                        <div class="testimonial-2-inner">
-                                            <div class="testimonial-quote-2">
-                                                <div class="quote-2-icon">
-                                                    <i class="fa fa-quote-right"></i>
-                                                </div>
-                                            </div>
-                                            <p>Books don’ts change people; paragraphs do, sometimes even sentences.</p>
-                                            <div class="client-info-2">
-                                                <span>Daniel Romero</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="single-testimonial-2 text-center">
-                                        <div class="testimonial-2-inner">
-                                            <div class="testimonial-quote-2">
-                                                <div class="quote-2-icon">
-                                                    <i class="fa fa-quote-right"></i>
-                                                </div>
-                                            </div>
-                                            <p>Books don’ts change people; paragraphs do, sometimes even sentences.</p>
-                                            <div class="client-info-2">
-                                                <span>Daniel Romero</span>
-                                            </div>
-                                        </div>
-                                    </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+                        <div class="product-wrap mb-55">
+                            <div class="product-img pro-theme-color-border mb-25">
+                                <a href="product-details.html">
+                                    <img src="/images/product/book-product-12.png" alt="">
+                                </a>
+                                <span class="badge-theme-color badge-right-20 badge-top-20 badge-ptb-1">-55%</span>
+                                <div class="product-action product-action-position-1 pro-action-theme-color">
+                                    <a title="Add to Cart" href="#"><i class="fa fa-cart-arrow-down"></i></a>
+                                    <a data-toggle="modal" data-target="#exampleModal" href="#"><i class="fa fa-search-plus"></i></a>
+                                    <a title="Add to Wishlist" href="#"><i class="fa fa-heart-o"></i></a>
+                                    <a title="Add to Compare" href="#"><i class="fa fa-compress"></i></a>
+                                </div>
+                            </div>
+                            <div class="product-content-2 pc-2-font-dec">
+                                <h4><a href="product-details.html">Daddy's Secret Baby</a></h4>
+                                <span><a href="#">by Shannon Roberts  (Author)</a></span>
+                                <div class="product-price-2">
+                                    <span class="old-price">$95.00</span>
+                                    <span class="new-price">$65.00</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="product-area section-padding-3 pt-110 pb-60 padding-60-row-col">
-                            <div class="container-fluid">
-                                <div class="section-title-5 mb-60 section-border-center text-center">
-                                    <h2>Book On Sale</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="subscribe-area bg-tan pt-100 pb-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 ml-auto mr-auto">
+                        <div class="subscribe-title-3 mb-30 text-center">
+                            <h3>Stay in touch & get 30% off</h3>
+                        </div>
+                        <div id="mc_embed_signup" class="subscribe-form-3">
+                            <form id="mc-embedded-subscribe-form" class="validate subscribe-form-style-3" novalidate="" target="_blank" name="mc-embedded-subscribe-form" method="post" action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef">
+                                <div id="mc_embed_signup_scroll" class="mc-form-3">
+                                    <input class="email" type="email" required="" placeholder="Enter your email address" name="EMAIL" value="">
+                                    <div class="mc-news-3" aria-hidden="true">
+                                        <input type="text" value="" tabindex="-1" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef">
+                                    </div>
+                                    <div class="clear-3">
+                                        <input id="mc-embedded-subscribe" class="button" type="submit" name="subscribe" value="Subscribe">
+                                    </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
-                                        <div class="product-wrap mb-55">
-                                            <div class="product-img pro-theme-color-border mb-25">
-                                                <a href="product-details.html">
-                                                    <img src="/images/product/book-product-9.png" alt="">
-                                                </a>
-                                                <span class="badge-theme-color badge-right-20 badge-top-20 badge-ptb-1">-25%</span>
-                                                <div class="product-action product-action-position-1 pro-action-theme-color">
-                                                    <a title="Add to Cart" href="#"><i class="fa fa-cart-arrow-down"></i></a>
-                                                    <a data-toggle="modal" data-target="#exampleModal" href="#"><i class="fa fa-search-plus"></i></a>
-                                                    <a title="Add to Wishlist" href="#"><i class="fa fa-heart-o"></i></a>
-                                                    <a title="Add to Compare" href="#"><i class="fa fa-compress"></i></a>
-                                                </div>
-                                            </div>
-                                            <div class="product-content-2 pc-2-font-dec">
-                                                <h4><a href="product-details.html">Prayer Journal for Women: 52 Week Scripture</a></h4>
-                                                <span><a href="#">by Shannon Roberts  (Author)</a></span>
-                                                <div class="product-price-2">
-                                                    <span class="old-price">$45.00</span>
-                                                    <span class="new-price">$20.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
-                                        <div class="product-wrap mb-55">
-                                            <div class="product-img pro-theme-color-border mb-25">
-                                                <a href="product-details.html">
-                                                    <img src="/images/product/book-product-10.png" alt="">
-                                                </a>
-                                                <span class="badge-theme-color badge-right-20 badge-top-20 badge-ptb-1">-35%</span>
-                                                <div class="product-action product-action-position-1 pro-action-theme-color">
-                                                    <a title="Add to Cart" href="#"><i class="fa fa-cart-arrow-down"></i></a>
-                                                    <a data-toggle="modal" data-target="#exampleModal" href="#"><i class="fa fa-search-plus"></i></a>
-                                                    <a title="Add to Wishlist" href="#"><i class="fa fa-heart-o"></i></a>
-                                                    <a title="Add to Compare" href="#"><i class="fa fa-compress"></i></a>
-                                                </div>
-                                            </div>
-                                            <div class="product-content-2 pc-2-font-dec">
-                                                <h4><a href="product-details.html">The Virgin Gift Kindle Edition</a></h4>
-                                                <span><a href="#">by Lauren Blakely  (Author)</a></span>
-                                                <div class="product-price-2">
-                                                    <span class="old-price">$70.00</span>
-                                                    <span class="new-price">$30.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
-                                        <div class="product-wrap mb-55">
-                                            <div class="product-img pro-theme-color-border mb-25">
-                                                <a href="product-details.html">
-                                                    <img src="/images/product/book-product-11.png" alt="">
-                                                </a>
-                                                <span class="badge-theme-color badge-right-20 badge-top-20 badge-ptb-1">-45%</span>
-                                                <div class="product-action product-action-position-1 pro-action-theme-color">
-                                                    <a title="Add to Cart" href="#"><i class="fa fa-cart-arrow-down"></i></a>
-                                                    <a data-toggle="modal" data-target="#exampleModal" href="#"><i class="fa fa-search-plus"></i></a>
-                                                    <a title="Add to Wishlist" href="#"><i class="fa fa-heart-o"></i></a>
-                                                    <a title="Add to Compare" href="#"><i class="fa fa-compress"></i></a>
-                                                </div>
-                                            </div>
-                                            <div class="product-content-2 pc-2-font-dec">
-                                                <h4><a href="product-details.html">The Lineup Kindle Edition</a></h4>
-                                                <span><a href="#">by Shannon Roberts  (Author)</a></span>
-                                                <div class="product-price-2">
-                                                    <span class="old-price">$75.00</span>
-                                                    <span class="new-price">$50.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
-                                        <div class="product-wrap mb-55">
-                                            <div class="product-img pro-theme-color-border mb-25">
-                                                <a href="product-details.html">
-                                                    <img src="/images/product/book-product-12.png" alt="">
-                                                </a>
-                                                <span class="badge-theme-color badge-right-20 badge-top-20 badge-ptb-1">-55%</span>
-                                                <div class="product-action product-action-position-1 pro-action-theme-color">
-                                                    <a title="Add to Cart" href="#"><i class="fa fa-cart-arrow-down"></i></a>
-                                                    <a data-toggle="modal" data-target="#exampleModal" href="#"><i class="fa fa-search-plus"></i></a>
-                                                    <a title="Add to Wishlist" href="#"><i class="fa fa-heart-o"></i></a>
-                                                    <a title="Add to Compare" href="#"><i class="fa fa-compress"></i></a>
-                                                </div>
-                                            </div>
-                                            <div class="product-content-2 pc-2-font-dec">
-                                                <h4><a href="product-details.html">Daddy's Secret Baby</a></h4>
-                                                <span><a href="#">by Shannon Roberts  (Author)</a></span>
-                                                <div class="product-price-2">
-                                                    <span class="old-price">$95.00</span>
-                                                    <span class="new-price">$65.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="brand-logo-area pt-60 pb-60 section-padding-3">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="brand-logo-active owl-carousel">
+                            <div class="single-brand-logo">
+                                <img src="/images/brand-logo/brand-logo-1.png" alt="">
+                            </div>
+                            <div class="single-brand-logo">
+                                <img src="/images/brand-logo/brand-logo-2.png" alt="">
+                            </div>
+                            <div class="single-brand-logo">
+                                <img src="/images/brand-logo/brand-logo-3.png" alt="">
+                            </div>
+                            <div class="single-brand-logo">
+                                <img src="/images/brand-logo/brand-logo-4.png" alt="">
+                            </div>
+                            <div class="single-brand-logo">
+                                <img src="/images/brand-logo/brand-logo-5.png" alt="">
+                            </div>
+                            <div class="single-brand-logo">
+                                <img src="/images/brand-logo/brand-logo-6.png" alt="">
+                            </div>
+                            <div class="single-brand-logo">
+                                <img src="/images/brand-logo/brand-logo-3.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner-bg-area bg-img pt-90 pb-90 book-banner-bg" style="background-image:url(/images/banner/book-sale-banner-4.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5 col-lg-6 col-md-8 col-sm-8 ml-auto">
+                        <div class="banner-bg-1-content">
+                            <h3>Flash Books Sales This Week for Kids</h3>
+                            <h2>off 30%</h2>
+                            <div class="slider-btn-2 btn-hover">
+                                <a class="animated slider-btn-2-bg-yellow slider-btn-2-ptb bg-black-hover" href="product-details.html">Shop now </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blog-area section-padding-1 pt-115 pb-90">
+            <div class="container-fluid">
+                <div class="section-title-5 text-center section-border-center mb-60">
+                    <h2>From Our Blog</h2>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6 col-lg-12">
+                        <div class="blog-wrap-2 mb-30">
+                            <div class="blog-img-2">
+                                <a href="blog-details.html"><img src="/images/blog/book-blog-1.jpg" alt="blog"></a>
+                            </div>
+                            <div class="blog-content-2 bc-padding-left">
+                                <div class="blog-category-2">
+                                    <a href="#">TECH, </a>
+                                    <a href="#">SMART</a>
+                                </div>
+                                <h3 class="rufina-font"><a href="blog-details.html">Advertisers Embrace Rich Media Format</a></h3>
+                                <div class="blog-meta-2">
+                                    <ul>
+                                        <li>By <a href="#"> John Snow</a></li>
+                                        <li>-</li>
+                                        <li><a href="#">19 Dec 2019</a></li>
+                                    </ul>
+                                </div>
+                                <p>Proin vitae nisl mauris. Nulla dignissim maximus molestie. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                                <div class="btn-style-4 btn-style-4-ptb1 btn-hover">
+                                    <a class="bg-black-hover" href="product-details.html">Read More</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="subscribe-area bg-tan pt-100 pb-100">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-8 ml-auto mr-auto">
-                                        <div class="subscribe-title-3 mb-30 text-center">
-                                            <h3>Stay in touch & get 30% off</h3>
-                                        </div>
-                                        <div id="mc_embed_signup" class="subscribe-form-3">
-                                            <form id="mc-embedded-subscribe-form" class="validate subscribe-form-style-3" novalidate="" target="_blank" name="mc-embedded-subscribe-form" method="post" action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef">
-                                                <div id="mc_embed_signup_scroll" class="mc-form-3">
-                                                    <input class="email" type="email" required="" placeholder="Enter your email address" name="EMAIL" value="">
-                                                    <div class="mc-news-3" aria-hidden="true">
-                                                        <input type="text" value="" tabindex="-1" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef">
-                                                    </div>
-                                                    <div class="clear-3">
-                                                        <input id="mc-embedded-subscribe" class="button" type="submit" name="subscribe" value="Subscribe">
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-12">
+                        <div class="blog-wrap-2 mb-30">
+                            <div class="blog-img-2">
+                                <a href="blog-details.html"><img src="/images/blog/book-blog-2.jpg" alt="blog"></a>
+                            </div>
+                            <div class="blog-content-2 bc-padding-left">
+                                <div class="blog-category-2">
+                                    <a href="#">TECH, </a>
+                                    <a href="#">SMART</a>
+                                </div>
+                                <h3 class="rufina-font"><a href="blog-details.html">Influencing The Influencer</a></h3>
+                                <div class="blog-meta-2">
+                                    <ul>
+                                        <li>By <a href="#"> John Snow</a></li>
+                                        <li>-</li>
+                                        <li><a href="#">19 Dec 2019</a></li>
+                                    </ul>
+                                </div>
+                                <p>Proin vitae nisl mauris. Nulla dignissim maximus molestie. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                                <div class="btn-style-4 btn-style-4-ptb1 btn-hover">
+                                    <a class="bg-black-hover" href="product-details.html">Read More</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="brand-logo-area pt-60 pb-60 section-padding-3">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="brand-logo-active owl-carousel">
-                                            <div class="single-brand-logo">
-                                                <img src="/images/brand-logo/brand-logo-1.png" alt="">
-                                            </div>
-                                            <div class="single-brand-logo">
-                                                <img src="/images/brand-logo/brand-logo-2.png" alt="">
-                                            </div>
-                                            <div class="single-brand-logo">
-                                                <img src="/images/brand-logo/brand-logo-3.png" alt="">
-                                            </div>
-                                            <div class="single-brand-logo">
-                                                <img src="/images/brand-logo/brand-logo-4.png" alt="">
-                                            </div>
-                                            <div class="single-brand-logo">
-                                                <img src="/images/brand-logo/brand-logo-5.png" alt="">
-                                            </div>
-                                            <div class="single-brand-logo">
-                                                <img src="/images/brand-logo/brand-logo-6.png" alt="">
-                                            </div>
-                                            <div class="single-brand-logo">
-                                                <img src="/images/brand-logo/brand-logo-3.png" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="banner-bg-area bg-img pt-90 pb-90 book-banner-bg" style="background-image:url(/images/banner/book-sale-banner-4.jpg);">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-xl-5 col-lg-6 col-md-8 col-sm-8 ml-auto">
-                                        <div class="banner-bg-1-content">
-                                            <h3>Flash Books Sales This Week for Kids</h3>
-                                            <h2>off 30%</h2>
-                                            <div class="slider-btn-2 btn-hover">
-                                                <a class="animated slider-btn-2-bg-yellow slider-btn-2-ptb bg-black-hover" href="product-details.html">Shop now </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="blog-area section-padding-1 pt-115 pb-90">
-                            <div class="container-fluid">
-                                <div class="section-title-5 text-center section-border-center mb-60">
-                                    <h2>From Our Blog</h2>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xl-6 col-lg-12">
-                                        <div class="blog-wrap-2 mb-30">
-                                            <div class="blog-img-2">
-                                                <a href="blog-details.html"><img src="/images/blog/book-blog-1.jpg" alt="blog"></a>
-                                            </div>
-                                            <div class="blog-content-2 bc-padding-left">
-                                                <div class="blog-category-2">
-                                                    <a href="#">TECH, </a>
-                                                    <a href="#">SMART</a>
-                                                </div>
-                                                <h3 class="rufina-font"><a href="blog-details.html">Advertisers Embrace Rich Media Format</a></h3>
-                                                <div class="blog-meta-2">
-                                                    <ul>
-                                                        <li>By <a href="#"> John Snow</a></li>
-                                                        <li>-</li>
-                                                        <li><a href="#">19 Dec 2019</a></li>
-                                                    </ul>
-                                                </div>
-                                                <p>Proin vitae nisl mauris. Nulla dignissim maximus molestie. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                                                <div class="btn-style-4 btn-style-4-ptb1 btn-hover">
-                                                    <a class="bg-black-hover" href="product-details.html">Read More</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-6 col-lg-12">
-                                        <div class="blog-wrap-2 mb-30">
-                                            <div class="blog-img-2">
-                                                <a href="blog-details.html"><img src="/images/blog/book-blog-2.jpg" alt="blog"></a>
-                                            </div>
-                                            <div class="blog-content-2 bc-padding-left">
-                                                <div class="blog-category-2">
-                                                    <a href="#">TECH, </a>
-                                                    <a href="#">SMART</a>
-                                                </div>
-                                                <h3 class="rufina-font"><a href="blog-details.html">Influencing The Influencer</a></h3>
-                                                <div class="blog-meta-2">
-                                                    <ul>
-                                                        <li>By <a href="#"> John Snow</a></li>
-                                                        <li>-</li>
-                                                        <li><a href="#">19 Dec 2019</a></li>
-                                                    </ul>
-                                                </div>
-                                                <p>Proin vitae nisl mauris. Nulla dignissim maximus molestie. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                                                <div class="btn-style-4 btn-style-4-ptb1 btn-hover">
-                                                    <a class="bg-black-hover" href="product-details.html">Read More</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <%- include('../includes/footer') %>
-
-
-                            <%- include('../includes/modal') %>
-
-    </div>
-
-
-    <%- include('../includes/scripts') %>
-</body>
-
-</html>
+                    </div>
+                </div>
+            </div>
+        </div>

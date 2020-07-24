@@ -1,0 +1,44 @@
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>E-Commerce</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%- include('./includes/styles') %>
+</head>
+
+
+<body>
+
+    <div class="main-wrapper">
+    <%- include('./includes/header') %>
+
+        <%- include('./includes/sidebar') %>
+
+            <!-- mini cart start -->
+            <%- include('./includes/mini_cart') %>
+
+                <!-- Mobile menu start -->
+                <%- include('./includes/mobile_menu') %>
+    <%-body%>
+
+
+    <%- include('./includes/footer') %>
+
+
+    <%- include('./includes/modal') %>
+
+    </div>
+
+
+<%- include('./includes/scripts') %>
+<script>
+
+
+</script>
+</body>
+
+</html>
