@@ -1,7 +1,10 @@
 const Route = require('express').Router();
 const  HomeController  = require('../app/controllers/HomeController');
-
+const  LoginController = require('../app/controllers/LoginController');
 Route.get('/', HomeController.home);
 Route.get('/category/',HomeController.category);
-
+Route.get('/login',LoginController.login);
+Route.post('/auth',LoginController.auth);
+Route.get('/signup',LoginController.signup);
+Route.post('/register',LoginController.register);
 module.exports = Route;
