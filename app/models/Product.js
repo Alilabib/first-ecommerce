@@ -19,10 +19,10 @@ module.exports = {
     Product,
     getAllProducts : async() =>{    
         try{
-          await  mongoose.connect(dbconfig.db_connection.DB_URL,dbconfig.db_connection.DB_OPTIONS);
+         await  mongoose.connect(dbconfig.db_connection.DB_URL,dbconfig.db_connection.DB_OPTIONS);
          let products = await Product.find({});
          await mongoose.disconnect();
-        return products;
+         return products;
         }catch(err){
             console.log(err);
         }
@@ -35,7 +35,8 @@ module.exports = {
            await mongoose.disconnect();
            return products;
           }catch(err){
-              console.log(err);
+            await mongoose.disconnect();
+            console.log(err);
           }
     }
 };

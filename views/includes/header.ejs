@@ -4,7 +4,7 @@
             <div class="row align-items-center">
                 <div class="col-xl-3 col-lg-2">
                     <div class="logo logo-res-lg">
-                        <a href="index.html">
+                        <a href="/">
                             <img src="/images/logo/logo.png" alt="logo">
                         </a>
                     </div>
@@ -13,95 +13,19 @@
                     <div class="main-menu menu-lh-3 main-menu-padding-1 menu-text-black text-center">
                         <nav>
                             <ul>
-                                <li><a class="active" href="index.html">HOME</a>
-                                    <ul class="mega-menu-style-1 mega-menu-width1">
-                                        <li class="mega-menu-sub-width50"><a class="menu-title" href="#">Home Group #01</a>
-                                            <ul>
-                                                <li><a href="index.html">Home Electronic</a></li>
-                                                <li><a href="index-book.html">Home Book</a></li>
-                                                <li><a href="index-fashion.html">Home Fashion</a></li>
-                                                <li><a href="index-flower.html">Home Flower</a></li>
-                                                <li><a href="index-cake.html">Home Cake</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="mega-menu-sub-width50"><a class="menu-title" href="#">Home Group #02</a>
-                                            <ul>
-                                                <li><a href="index-furniture.html">Home Furniture</a></li>
-                                                <li><a href="index-handmade.html">Home Handmade</a></li>
-                                                <li><a href="index-kids.html">Home Kids</a></li>
-                                                <li><a href="index-organic.html">Home Organic</a></li>
-                                                <li><a href="index-pet.html">Home Pet</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
+                                <li><a class="active" href="/">HOME</a>
+                                    
                                 </li>
-                                <li><a href="#">PAGES</a>
-                                    <ul class="sub-menu-width">
-                                        <li><a href="about-us.html">About Us</a></li>
-                                        <li><a href="contact.html">Contact Page</a></li>
-                                        <li><a href="404.html">404 Page</a></li>
-                                        <li><a href="faq.html">FAQ</a></li>
-                                        <li><a href="coming-soon.html">Comming Soon</a></li>
-                                        <li><a href="empty-cart.html">Empty Cart</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="shop-fullwide.html">SHOP</a>
-                                    <ul class="mega-menu-style-2 mega-menu-width2 menu-negative-mrg4">
-                                        <li class="mega-menu-sub-width20"><a class="menu-title" href="#">Shop Layout</a>
-                                            <ul>
-                                                <li><a href="shop-fullwide.html">Shop Fullwidth</a></li>
-                                                <li><a href="shop-sidebar.html">Shop Sidebar</a></li>
-                                                <li><a href="shop-3-col.html">Shop 03 Columns</a></li>
-                                                <li><a href="shop-2-col.html">Shop 02 Columns</a></li>
-                                                <li><a href="shop-list-style.html">Shop List Style</a></li>
-                                                <li><a href="shop-collection.html">Shop Collection</a></li>
-                                                <li><a href="shop-instagram.html">Shop Instagram</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="mega-menu-sub-width22"><a class="menu-title" href="#">Product Layout</a>
-                                            <ul>
-                                                <li><a href="product-details.html">Single 01</a></li>
-                                                <li><a href="product-details-2.html">Single 02</a></li>
-                                                <li><a href="product-details-group.html">Grouped</a></li>
-                                                <li><a href="product-details-sticky.html">Sticky Info</a></li>
-                                                <li><a href="product-details-configurable.html">Configurable</a></li>
-                                                <li><a href="product-details-thumbnail.html">Thumbnail</a></li>
-                                                <li><a href="product-details-video.html">Video</a></li>
-                                                <li><a href="product-details-affiliate.html">Affiliate</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="mega-menu-sub-width20"><a class="menu-title" href="#">Shop Pages</a>
-                                            <ul>
-                                                <li><a href="my-account.html">My Account</a></li>
-                                                <li><a href="checkout.html">Check Out</a></li>
-                                                <li><a href="cart.html">Shopping Cart</a></li>
-                                                <li><a href="wishlist.html">Wishlist</a></li>
-                                                <li><a href="order-tracking.html">Order Tracking</a></li>
-                                                <li><a href="compare.html">Compare</a></li>
-                                                <li><a href="store.html">Store</a></li>
-                                                <li><a href="login-register.html">login / register</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="mega-menu-sub-width37">
-                                            <div class="banner-menu-content-wrap default-overlay">
-                                                <a href="product-details.html"><img src="/images/menu/banner-header-2.jpg" alt="banner"></a>
-                                                <div class="banner-menu-content">
-                                                    <h2>New <br>Collections</h2>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="shop-fullwide.html">COLLECTIONS</a></li>
-                                <li><a href="blog.html">BLOG</a>
-                                    <ul class="sub-menu-width">
-                                        <li><a href="blog.html">Blog Page</a></li>
-                                        <li><a href="blog-no-sidebar.html">Blog No sidebar</a></li>
-                                        <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
-                                        <li><a href="blog-details.html">Blog Details</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html">CONTACT</a></li>
+                                <% if(isUser){ %>                                
+                                <li><a href="/blog">BLOG</a></li>
+                                <li><a href="/contact">CONTACT</a></li>
+                                <li><a href="/logout">Logout</a></li>
+                                <% }else{ %>
+                                    <li><a href="/login">Login</a>
+                                    </li>
+                                    <li><a href="/signup">signup</a></li>
+                                <% }  %> 
+                                
                             </ul>
                         </nav>
                     </div>

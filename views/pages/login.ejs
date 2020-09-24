@@ -1,4 +1,22 @@
-<form>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>E-Commerce</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%- include('./../includes/styles') %>
+</head>
+
+
+<body>
+<div class="container">
+<div class="main-wrapper">
+    <%- include('./../includes/header') %>
+
+<form action="/login" method="POST">
     <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
       <input type="email" class="form-control" name="email" id="exampleInputEmail1" placeholder="Email">
@@ -14,3 +32,19 @@
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
   </form>
+  <br>
+  <% if(authError){ %>
+  <p class="alert alert-danger">
+    <%= authError %>
+  </p>
+  <% } %>
+</div>
+</div>
+  <%- include('./../includes/scripts') %>
+<script>
+
+
+</script>
+</body>
+
+</html>
